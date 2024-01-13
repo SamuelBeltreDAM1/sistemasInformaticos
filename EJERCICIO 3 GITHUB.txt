@@ -1,0 +1,35 @@
+EJERCICIO 3 GITHUB: GESTION DE RAMAS
+
+PARA LA CREACION DE UNA NUEVA RAMA: git branch bibliografia
+echo "Texto del capítulo 4." > capitulos/capitulo4.txt
+PARA AÑADIR LOS CAMBIOS AL LA ZONA DE INTERCAMBIO TEMPORAL: git add capitulos/capitulo4.txt
+PARA HACER COMMIT DE LOS CAMBIOS; git commit -m "Añadido capítulo 4."
+HISTORIAL DEL REPOSITORIO INCLUYENDO LAS RAMAS: git log --oneline
+SIRVE PARA CAMBIAR DE RAMA: git checkout bibliografia
+
+echo "Chacon, S. and Straub, B. Pro Git. Apress." > bibliografia.txt
+git add bibliografia.txt
+git commit -m "Añadida primera referencia bibliográfica."
+git log --oneline
+git checkout master
+
+ESTOS SIRVE PARA FUSIONAR LAS RAMAS: git merge bibliografia
+git log --oneline
+ESTO SIRVE PARA BORRAR UNA RAMA: git branch -d bibliografia
+git log --oneline
+
+CREACION DE RAMA: git branch bibliografia
+git checkout bibliografia
+echo "Scott Chacon and Ben Straub. Pro Git. Apress." > bibliografia.txt
+echo "Ryan Hodson. Ry’s Git Tutorial. Smashwords (2014)" >> bibliografia.txt
+git add bibliografia.txt
+git commit -m "Añadida nueva referencia bibliográfica."
+git checkout master
+echo "Chacon, S. and Straub, B. Pro Git. Apress." > bibliografia.txt
+echo "Loeliger, J. and McCullough, M. Version control with Git. O’Reilly." >> bibliografia.txt
+git add bibliografia.txt
+git commit -m "Añadida nueva referencia bibliográfica."
+git merge bibliografia
+git add bibliografia.txt
+git commit -m "Resuelto conflicto de bibliografía."
+git log --oneline

@@ -1,0 +1,28 @@
+EJERCICIO 1 GITHUB: CREACION Y ACTUALIZACION DE REPOSITORIOS
+
+PARA DEFINIR EL NOMBRE DEL USUARIO: git config --global user.name "SamuelBeltreDAM1"
+PARA DEFINIR EL CORREO DEL USUARIO: git config --global user.email "samubelme34ec@linkiafp.online"
+PARA ACTIVAR EL COLOREADO DE SALIDA: git config --global color.ui auto
+PARA MOSTRAR SU CONTENIDO FINAL: git config --global --list
+
+CREACION DE UN NUEVO REPOSITORIO: mkdir libro
+
+PARA MOSTRAR EL CONTENIDO DEL DIRECTORIO: dir
+PARA VER EL ESTADO DEL REPOSITORIO: git status
+PARA LA CREACION DEL FICHERO;
+echo "Capítulo 1: Introducción a Git" > indice.txt
+echo "Capítulo 2: Flujo de trabajo básico" >> indice.txt
+echo "Capítulo 3: Repositorios remotos" >> indice.txt
+git status
+PARA AÑADIR EL FICHERO A LA ZONA DE INTERCAMBIO TEMPORAL: git add indice.txt
+git status
+
+REALIZAR COMMIT DE LOS ULTIMOS CAMBIOS:git commit -m "Añadido índice del libro."
+git status
+
+echo "Capítulo 1: Introducción a Git" >> indice.txt
+echo "Capítulo 2: Flujo de trabajo básico" >> indice.txt
+echo "Capítulo 3: Gestión de ramas" >> indice.txt
+echo "Capítulo 4: Repositorios remotos" >> indice.txt
+PARA VER LOS CAMBIOS REALIZADOS CON RESPECTO AL COMMIT ANTERIOR: git diff
+git commit -m "Añadido capítulo 3 sobre gestión de ramas"
